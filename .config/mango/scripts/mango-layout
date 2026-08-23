@@ -1,0 +1,21 @@
+#!/bin/sh
+  
+layout=$(
+  mmsg get all-monitors 2>/dev/null |
+    jq -r '.monitors[] | select(.active == true) | .layout_symbol'
+)
+
+# Supported Layouts: tile,scroller,monocle,grid,deck,center_tile,right_tile,vertical_tile,vertical_scroller,vertical_grid,vertical_deck,tgmix
+
+case "$layout" in
+  DW) printf 'DWINDLE\n' ;;  # dwindle
+  T) printf 'TILE\n' ;;  # tile
+  S) printf 'SCROLL\n' ;;  # scroller
+  M) printf 'MONO\n' ;;  # monocle
+  G) printf 'GRID\n' ;;  # grid
+  K) printf 'DECK\n' ;;  # deck
+  CT) printf 'CENT-TILE\n' ;;  # Centre Tile
+  RT) printf 'R-TILE\n' ;;  # Right Tile
+  VT) printf 'VERT-TILE\n' ;;  # Vert Tile
+  *) printf '%s\n' "$layout" ;;
+esac
