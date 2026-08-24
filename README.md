@@ -3,6 +3,7 @@ This is designed to be used with Archcraft 2026-08-01 MangoWC premium.
 It will show the current layout name on the waybar such as [DWINDLE] or [TILE] in a matching style.
 
 1 - Put the file `mango-layout` in `~/.config/mango/scripts`
+
 2 - Make executable
 
 3 - Add this module to `~/.config/mango/waybar/modules`
