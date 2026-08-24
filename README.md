@@ -1,11 +1,11 @@
 This is designed to be used with Archcraft 2026-08-01 MangoWC premium.
-It will show the current layour name on the waybar such as [DWINDLE] or [TILE] in a matching style.
+It will show the current layout name on the waybar such as [DWINDLE] or [TILE] in a matching style.
 
-1 - put the file mango-layout in ~/.config/mango/scripts
+1 - put the file mango-layout in `~/.config/mango/scripts`
 2 - make executable
 
-3 - Add this module to ~/.config/mango/waybar/modules
-
+3 - Add this module to `~/.config/mango/waybar/modules`
+```
  // mango-layout
     "custom/mango-layout": {
 		"exec": "~/.config/mango/scripts/mango-layout",
@@ -13,18 +13,18 @@ It will show the current layour name on the waybar such as [DWINDLE] or [TILE] i
 		"format": "{}",
 		"tooltip": false
 	}
-
-  4 - Add the module to your waybar in ~/.config/mango/waybar/config by adding: "custom/mango-layout"
+```
+  4 - Add the module to your waybar in `~/.config/mango/waybar/config` by adding: `"custom/mango-layout"`
 
   example: 
-
+```
   "modules-center": [ "ext/workspaces", "custom/mango-layout" ],
-
-  5 - add "#custom-mango-layout" to the CSS file ~/.config/mango/waybar/style.css
+```
+  5 - add `#custom-mango-layout` to the CSS file `~/.config/mango/waybar/style.css`
   Open the CSS file, scroll all the way to the bottom & add it to the common style.
 
   example: (I added it here as the first #id in the list)
-
+```
   /** ********** Common style ********** **/
 #custom-mango-layout,
 #pulseaudio,
@@ -39,8 +39,8 @@ It will show the current layour name on the waybar such as [DWINDLE] or [TILE] i
 	padding: 2px 12px;
 	margin: 6px 0px ;
 }
-
-  6 - thats all. logout / login
+```
+  6 - that's all. logout / login
 
   ISSUES:
   If the waybar doesnt load as normal, you made an error in code. Check.
